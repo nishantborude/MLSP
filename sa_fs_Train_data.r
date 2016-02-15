@@ -33,3 +33,4 @@ feature_list = data.frame(temp)
 names(feature_list) = c("Features")
 
 write.csv(data,"~/MLSP/Train/sa_fs_Train.csv", row.names = FALSE)
+write.csv(feature_list,"~/MLSP/sa_fs_feature_list.csv", row.names = FALSE)
