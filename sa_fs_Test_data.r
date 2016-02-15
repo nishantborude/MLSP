@@ -9,7 +9,7 @@ train_data = read.csv(file='~/MLSP/Train/sa_fs_train.csv')
 data_both = read.csv(file='~/MLSP/Test/test_both.csv')
 data_SBM = read.csv(file='~/MLSP/Test/test_SBM.csv')
 
-cols = read.csv('~/MLSP/sa_fs_list.csv')
+cols = read.csv('~/MLSP/sa_fs_feature_list.csv')
 
 data = data.frame(Id = data_both$Id)
 
