@@ -10,4 +10,4 @@ For using Simulated annealing, run sa_fs_Train.r to get list of selected feature
 
 For 3rd solution, run fit_dwd_3_pos.r
 
-For 2nd solution, run Kaggle_2_Sub.r
+For 2nd solution, run Kaggle_2_Sub.r. (2nd solution uses doMC which runs exclusively on Linux). To run it on Windows, comment doMC library and comment registerDoMC(cores=3) line from the code.
