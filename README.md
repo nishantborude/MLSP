@@ -13,3 +13,9 @@ For 3rd solution, run fit_dwd_3_pos.r
 For 2nd solution, run Kaggle_2_Sub.r. (2nd solution uses doMC which runs exclusively on Linux). To run it on Windows, comment doMC library and comment registerDoMC(cores=3) line from the code.
 
 ensemble_gpls_nb.r uses caretEnsemble package. Run the code by managing the appropriate paths.
+
+We have used caretStack for gpls and nb models using glm method and got same accuracy as caretEnsemble for gpls and nb. To run the file stack_gpls_nb.r, you need to have the test files split initially. Run the code on the split 12 files.
+
+h2o_superlearner.r includes the code for glm, rf, deeplearning and gbm. However, the accuracy reduced using superlearner as it doesn't provide the packages we need like gpls and nb.
+
+We used different approach for solving this problem. We trained different models using ensemble gpls-nb, dwdPoly, nnet, wsrf and lda. We took each test case individually to take the probability separately and then compared probability for every model. We took the count of how many of the probabilities were Healthy_Control and how many were Schizophrenic. Out of 5 predictions, the one which has maximum count, we take an average of it and add this score to the submission_example.csv file.
